@@ -96,7 +96,7 @@ def diff_percent(values):
 
 if __name__ == '__main__':
     # Fetch dataset
-    dataset = pd.read_csv("datasets/dataset_simple_example.csv")
+    dataset = pd.read_csv("dataset_simple_example.csv")
     dataset = dataset.sort_values(by=['date']).reset_index(drop=True).to_numpy() # Sort and convert to numpy array
 
     # Split into 2 arrays
