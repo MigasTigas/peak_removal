@@ -70,7 +70,7 @@ def spacing(dates, values):
 
 def diff_percent(values):
     '''
-    This is a simple detection, it calculates the percentual difference between two values and if its higher than
+    This is a simple detection, it calculates the percentage difference between two values and if its higher than
     1 (meaning that it doubles at least) states as a peak
     :param values: Water flow values, in float
     '''
@@ -86,7 +86,7 @@ def diff_percent(values):
 
     plt.cla()
     plt.plot(values, "g", label="Real values")  # The real values, in green
-    plt.plot(diff_points, "y", label="Percentual differences") # The percentual differences, in yellow
+    plt.plot(diff_points, "y", label="Percentual differences") # The percentage differences, in yellow
     plt.plot(549, values[549], "ob", label="Actual outlier peak")  # The actual outlier peak, in blue
     plt.plot(peaks, values[peaks], "xr", label="Peaks detected")  # The peaks detected, in red crosses
     plt.legend()
@@ -109,5 +109,5 @@ if __name__ == '__main__':
     plt.figure(num='Value spacing detection')
     spacing(dates, values) # Detecting via value spacing (value[1] - value[0]) and medians
     plt.figure(num='Percentual difference detection')
-    diff_percent(values)  # Detecting via percentual difference
+    diff_percent(values)  # Detecting via percentage difference
 
