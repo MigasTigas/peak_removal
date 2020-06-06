@@ -1,1 +1,0 @@
-# pike_removal
